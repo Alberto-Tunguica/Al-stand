@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title>AL-STAND</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/contacto.css">
+</head>
+<body>
+  <nav class="nav" style="border-bottom: 1px solid #ccc;">
+    <div class="container flex1">
+      <div class="logo">
+        <a href="index.html" style="font-size: 20px; text-decoration: none; color: #000; font-weight: bold;">AL-STAND</a>
+      </div>
+      <div class="menu">
+        <div class="main_list" id="mainListDiv">
+          <ul>
+            <li> <a href="index.html">Home</a> </li>
+            <li> <a href="sobre.html">Sobre</a> </li>
+            <li> <a href="contacto.html">Contacto</a> </li>
+          </ul>
+        </div>
+      </div>
+      <div class="media_button">
+        <i class="fas fa-bars" id="mediaButton"></i>
+      </div>
+
+      <div id="login-container">
+        <a href="login.html" style="gap: 10px; display: flex; align-items: center; justify-content: center;text-decoration: none; color: #37B234;" id="login-link">
+          Login<i class="far fa-unlock-alt"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="form-wrapper" style="padding: 2rem 5%;">
+    <div class="container">
+        <h1 style="text-align: center;">Contacte-nós</h1>
+        <form class="row input-container">
+                <div class="col-xs-12">
+                    <div class="styled-input wide">
+                        <input type="text" required />
+                        <label>Name</label> 
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="styled-input">
+                        <input type="text" required />
+                        <label>Email</label> 
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="styled-input" style="float:right;">
+                        <input type="text" required />
+                        <label>Phone Number</label> 
+                    </div>
+                </div>
+                <div class="col-xs-10">
+                    <div class="styled-input wide">
+                        <textarea required></textarea>
+                        <label>Message</label>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <button type="submit" style="border-radius: 0; cursor: pointer;">ENVIAR</button>
+                </div>
+        </fo>
+    </div>    
+  </div>
+  
+  <footer>
+    <div class="scontainer grid">
+      <div class="box">
+        <div class="logo">
+          <h1>AL-STAND</h1>
+        </div>
+        <p> Na Alberto Stand, tu encontras os melhores carros, contacte-nos para mais informações.</p>
+        <h1>+244939363692</h1>
+        <small>Email: albertotunguica939@gmail.com</small>
+      </div>
+
+      <div class="box">
+        <h3>Menu </h3>
+        <div class="flex1">
+          <ul class="last-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contacto.html">Contacte-nos</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="login.html">Login</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="box">
+        <h3>Mantém Contacto</h3>
+        <div class="input flex1">
+          <input type="email" placeholder="Email Address">
+          <i class="far fa-long-arrow-right"></i>
+        </div>
+        <p>Fique ligado nas nossas vendas especiais</p>
+        <div class="social_media">
+          <a href="http://www.facebook.com" id="special-list"><i class="fab  fa-facebook-f"></i></a>
+          <a href="http://www-instagram.com" id="special-list"> <i class="fab  fa-instagram"></i></a>
+          <a href="http://www.twitter.com" id="special-list"><i class="fab  fa-twitter"></i></a>
+          <a href="http://www.youtube.com" id="special-list"><i class="fab  fa-youtube"></i></a>
+          <a href="http://www.gmail.com" id="special-list"><i class="fab  fa-google"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    anime({
+      targets: '.ani_image',
+      translateX: 70,
+      loop: true,
+      direction: 'alternate',
+      easing: 'easeInOutSine'
+    });
+
+    var mainListDiv = document.getElementById("mainListDiv");
+    var mediaButton = document.getElementById('mediaButton');
+    var loginContainer = document.getElementById('login-container');
+
+    mediaButton.onclick = function() {
+      mainListDiv.classList.toggle('show_list');
+      mediaButton.classList.toggle('active');
+    }
+
+    function checkLogin() {
+      var username = localStorage.getItem('username');
+      if (username) {
+        loginContainer.innerHTML = '<div style="display: flex; gap: 10px; align-items: baseline;"><span> Ola, ' + username + '</span><button onclick="logout()" style="padding: 5px 10px; background-color: #37B234; color: #fff; border: none; border-radius: 5px;">Logout</button></div>';
+      }
+    }
+
+    function logout() {
+      localStorage.removeItem('username');
+      location.reload();
+    }
+
+    document.addEventListener('DOMContentLoaded', checkLogin);
+
+  </script>
+  </html>
+  </body>
+  
